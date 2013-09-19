@@ -1,0 +1,31 @@
+# Language. Currently available: en, pl.
+language: en
+
+# A maximum number of shops that a member of a group can create.
+shops_limit:
+  default: 2
+
+# A price that a member of a group will have to pay after he creates a new shop.
+shop_price:
+  default: 0
+
+# Account server name for collected taxes.
+server_account_name:
+
+# List of items excluded from the trade.
+forbidden_items:
+  - AIR
+  
+# Minimal prices for specified items.
+minimal_price:
+  AIR: 0
+  
+# Value of the income tax (percent).
+income_tax:
+  default: 0
+  
+# If true shop owners will receive shop transaction notifications.
+notifications: true
+
+# A number of days that the transaction data should be stored in the database.
+transactions_days_limit: 5

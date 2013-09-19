@@ -1,0 +1,25 @@
+name: AShops
+version: 2.0
+description: AShops Bukkit Plugin.
+author: Austin
+website: http://www.austindev.pl/
+main: pl.austindev.ashops.AShops
+database: true
+depend: [Vault]
+commands:
+  ashop:
+    description: Creates a new player shop.
+  asshop:
+    description: Creates a new server shop.
+  abuy:
+    description: Allows to buy items from clients.
+  asell:
+    description: Allows to sell items to clients.
+  aremove:
+    description: Removes a shop.
+  atoggle:
+    description: Open/close a shop.
+  areload:
+    description: Reloads a plugin.
+  ashops:
+    description: Lists all plugin's commands.
