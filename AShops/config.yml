@@ -1,6 +1,9 @@
 # Language. Currently available: en, pl.
 language: en
 
+# A capacity of the shop inventory (1 is equal to the capacity of a single chest). [1-4]
+capacity: 1
+
 # A maximum number of shops that a member of a group can create.
 shops_limit:
   default: 2

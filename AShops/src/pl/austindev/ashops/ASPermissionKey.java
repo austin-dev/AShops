@@ -41,13 +41,13 @@ public enum ASPermissionKey implements PermissionKey {
 	 */
 	PLAYER_SHOP("playershop", PLAYER),
 	/**
-	 * Allows to: buy items from shop and buy them to shop, if the player has
-	 * also a permission to create a shop.
+	 * Allows to: buy items from shops; buy items in own shops if a player has
+	 * also permission to create one.
 	 */
 	BUY_ITEMS("buy", PLAYER),
 	/**
-	 * Allows to: sell items to shop and sell them from shop, if the player has
-	 * also a permission to create a shop.
+	 * Allows to: sell items to shops; sell items in own shops if a player has
+	 * also permission to create one.
 	 */
 	SELL_ITEMS("sell", PLAYER),
 	/**

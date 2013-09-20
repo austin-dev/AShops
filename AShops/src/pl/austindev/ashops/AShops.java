@@ -83,6 +83,7 @@ public class AShops extends BukkitPlugin {
 		this.serverShopsManager = new ServerShopsManager(this);
 		this.playerShopsHandler = new PlayerShopsHandler(this);
 		this.serverShopsHandler = new ServerShopsHandler(this);
+		PlayerShop.MAX_CAPACITY = getConfiguration().getCapacity();
 		registerExecutors();
 		registerListeners();
 		setupMetrics();
@@ -176,10 +177,11 @@ public class AShops extends BukkitPlugin {
 	private final static List<Class<?>> tableClasses = new LinkedList<Class<?>>();
 	static {
 		Collections.<Class<?>> addAll(tableClasses, PlayerShop.class,
-			ServerShop.class, PlayerShopItem.class, ServerShopItem.class,
-			PlayerShopOffer.class, ServerShopOffer.class,
-			PlayerSellOffer.class, PlayerBuyOffer.class, ServerSellOffer.class,
-			ServerBuyOffer.class, PlayerShopTransaction.class);
+				ServerShop.class, PlayerShopItem.class, ServerShopItem.class,
+				PlayerShopOffer.class, ServerShopOffer.class,
+				PlayerSellOffer.class, PlayerBuyOffer.class,
+				ServerSellOffer.class, ServerBuyOffer.class,
+				PlayerShopTransaction.class);
 	}
 
 }

@@ -66,7 +66,12 @@ public enum ASConfigurationPath implements ConfigurationPath {
 	/**
 	 * Number of days transactions will be kept in the database.
 	 */
-	TRANSACTIONS_DAYS_LIMIT("transactions_days_limit");
+	TRANSACTIONS_DAYS_LIMIT("transactions_days_limit"),
+	/**
+	 * A capacity of the shop inventory (1 is equal to the capacity of a single
+	 * chest). [1-4]
+	 */
+	CAPACITY("capacity");
 	private final String path;
 
 	private ASConfigurationPath(String path) {

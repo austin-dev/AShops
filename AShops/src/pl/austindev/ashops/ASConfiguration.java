@@ -27,6 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryType;
 
 import pl.austindev.mc.PluginConfiguration;
 
@@ -46,6 +47,15 @@ public class ASConfiguration extends PluginConfiguration {
 		}
 		return locale != null && locale.getCountry().length() > 0 ? locale
 				: Locale.ENGLISH;
+	}
+
+	public int getCapacity() {
+		int capacity = getInt(ASConfigurationPath.CAPACITY);
+		if (capacity < 1)
+			capacity = 1;
+		else if (capacity > 4)
+			capacity = 4;
+		return capacity * 64 * InventoryType.CHEST.getDefaultSize();
 	}
 
 	public BigDecimal getPrice(Player player) {
