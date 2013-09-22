@@ -48,7 +48,7 @@ public class OffersUtils {
 	public static ItemStack toItem(String string) {
 		String[] itemCode = string.split(":");
 		if (itemCode.length > 0) {
-			Material type = Material.getMaterial(itemCode[0]);
+			Material type = Material.getMaterial(itemCode[0].toUpperCase());
 			if (type != null) {
 				if (itemCode.length > 1) {
 					short data = toData(itemCode[1]);
@@ -87,7 +87,8 @@ public class OffersUtils {
 		for (String enchantCode : string.split(",")) {
 			String[] enchant = enchantCode.split("-");
 			if (enchant.length == 2) {
-				Enchantment ench = Enchantment.getByName(enchant[0]);
+				Enchantment ench = Enchantment.getByName(enchant[0]
+						.toUpperCase());
 				if (ench != null) {
 					int level = toEnchantLevel(enchant[1]);
 					if (level > 0) {

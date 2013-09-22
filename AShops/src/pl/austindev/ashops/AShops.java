@@ -17,14 +17,12 @@
  */
 package pl.austindev.ashops;
 
-import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 import javax.persistence.PersistenceException;
 
-import net.milkbowl.vault.Metrics;
 import pl.austindev.ashops.commands.ABUYCommandExecutor;
 import pl.austindev.ashops.commands.ARELOADCommandExecutor;
 import pl.austindev.ashops.commands.AREMOVECommandExecutor;
@@ -86,22 +84,12 @@ public class AShops extends BukkitPlugin {
 		PlayerShop.MAX_CAPACITY = getConfiguration().getCapacity();
 		registerExecutors();
 		registerListeners();
-		setupMetrics();
 	}
 
 	@Override
 	public void onDisable() {
 		for (ShopType shopType : ShopType.values()) {
 			getShopsHandler(shopType).handlePluginDisable();
-		}
-	}
-
-	public void setupMetrics() {
-		try {
-			Metrics metrics = new Metrics(this);
-			metrics.start();
-		} catch (IOException e) {
-			// Failed to submit the stats.
 		}
 	}
 
