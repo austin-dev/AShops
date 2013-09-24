@@ -45,8 +45,7 @@ public class ASConfiguration extends PluginConfiguration {
 		if (language != null) {
 			locale = new Locale(language);
 		}
-		return locale != null && locale.getCountry().length() > 0 ? locale
-				: Locale.ENGLISH;
+		return locale != null ? locale : Locale.ENGLISH;
 	}
 
 	public int getCapacity() {
